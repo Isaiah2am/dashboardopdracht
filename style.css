@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html{
+    font-style: 62.5%;
+}
+
+body{
+    display: flex;
+    font-size: 2rem;
+    background-color: #FFF2F2;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30rem;
+    height: 30rem;
+    border-radius: 5rem;
+    box-shadow: 0px 10px 20px 0 rgba(0,0,0,0.2);
+    flex-shrink: 0  ;
+}
+.card--slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    
+}
+
+.card--slider >h2{
+
+    font-size: 2rem%;
+    
+}
+
+.slider::-webkit-slider-thumb {
+ 
+  }
+  
+  .slider::-moz-range-thumb {
+   width: 3rem;
+   height: 3rem;
+   border-radius: 50%;
+   border: none;
+   background-color: black;
+  }
+
+.card--slider > input{
+    appearance: none;
+    width: 100%;
+    height: 1.8rem;
+    border-radius: 5rem;
+    background: #3494E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}   
+
+.card--stopwatch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button{
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.button--start{
+    background-color: #AEEA94;
+}
+
+.button--stop{
+    background-color: #E52020;    
+}
+
+.button--reset{
+    background-color: #27445D;
+}
