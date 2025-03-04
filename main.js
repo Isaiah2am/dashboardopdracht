@@ -57,3 +57,36 @@ slider.oninput = function(){
 
 
 
+// gegevens//
+
+
+
+//data ophalen//
+
+const paragraph = document.getElementById("js--text");
+const fotoimg = document.getElementById("js--img");
+
+let data = fetch("data.json").then(
+    function(binnengekomendata){
+        return binnengekomendata.json();
+    }).then(
+            function(echtedata){
+                paragraph.innerHTML = echtedata.text;
+                fotoimg.setAttribute("src",echtedata.img);
+            });
+    
+
+
+
+        
+        
+
+
+
+const text = document.getElementById("js--text")
+text.innerText = data.text;
+
+
+const img = document.getElementById("js--img");
+img.setAttribute("src", data.img);
+
