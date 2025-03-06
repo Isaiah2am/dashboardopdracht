@@ -102,12 +102,15 @@ font-size: 75%;
 
 .button--start{
     background-color: #AEEA94;
+    width: 6.2rem;
 }
 
 .button--stop{
     background-color: #E52020;    
+    width: 6.2rem;
 }
 
 .button--reset{
     background-color: #27445D;
+    width: 6.2rem;
 }

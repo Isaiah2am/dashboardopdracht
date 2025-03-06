@@ -10,26 +10,43 @@ const minutestimer = document.getElementById("js--minutes")
 
 let timer;
 
+
+   
+
 startbutton.onclick = function(){
+
+    var x = document.getElementById("js--start");
+  if (x.innerHTML === "Start") {
+    x.innerHTML = "Stop";
+  } else {
+    x.innerHTML = "Start";
+  }
+
+    var element = document.getElementById("js--start");
+    element.classList.toggle("button--stop");
+
+ 
     if(running === true){
+        clearInterval(timer);
+        running = false;
         return;
     }
-    running = true;
-   timer = setInterval(function(){
-        seconds = seconds +1
-        if(seconds === 60){
-            minutes = minutes +1;
-            minutestimer.innerText = minutes;
-            seconds = 0;
-        }
-        secondstimer.innerText = seconds
-    }, 1000);
+    
+    if(running === false){
+        running = true;
+        timer = setInterval(function(){
+             seconds = seconds +1
+             if(seconds === 60){
+                 minutes = minutes +1;
+                 minutestimer.innerText = minutes;
+                 seconds = 0;
+             }
+             secondstimer.innerText = seconds
+         }, 1000);
+        return;
+    }
 }
 
-stopbutton.onclick = function(){
-    clearInterval(timer);
-    running = false;
-}
 
 resetbutton.onclick = function(){
     secondstimer.innerText = seconds
